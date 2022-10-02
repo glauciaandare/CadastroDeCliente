@@ -39,7 +39,7 @@ namespace CadastroDeClientes {
             Console.WriteLine("= " + titulo);
             Console.WriteLine("==================================================");
             Console.WriteLine();
-            
+
         }
         /// <summary>
         /// Mostra as opções do Menu
@@ -79,9 +79,9 @@ namespace CadastroDeClientes {
                     ConsultarTodosClientes();
                     break;
                 case 5:
-                //ConsultarTodosClientesAtivos();
+                    //ConsultarTodosClientesAtivos();
                 case 6:
-                //InformarRendaMedia();
+                    //InformarRendaMedia();
                 case 7:
                     InformarAniversarios();
                     break;
@@ -128,13 +128,25 @@ namespace CadastroDeClientes {
 
         static void AlterarCliente()
         {
-            //TODO: Ugo vai fazer essa função
+            //TODO: 
 
         }
 
         static void ExcluirCliente()
         {
+            Console.WriteLine("Digite seu nome");
+            int ExcluirCliente = int.Parse(Console.ReadLine());
+            var ExCli = _cadastro.Where(r => r.nome.Equals(ExcluirCliente)).FirstOrDefault();
 
+            if (ExCli != null)
+            {
+                _cadastro.Remove(ExCli);
+                Console.WriteLine("Cliente removido com sucesso. ");
+            }
+            else
+            {
+                Console.WriteLine("Cliente nao cadastrado");
+            }
 
         }
 
@@ -150,6 +162,36 @@ namespace CadastroDeClientes {
             }
             Console.ReadKey();
         }
+
+        static void ConsultarTodosClientesAtivos()
+        {
+            //TODO: 
+
+        }
+
+        static void InformarRendaMedia()
+        {
+            //TODO:
+        }
+
+        static void InformarAniversarios()
+        {
+            string hoje = DateTime.Now.ToShortDateString();
+            Cabecalho(" Aniversariantes do dia de hoje:" + hoje);
+
+            Console.ReadKey();
+        }
+
+        static void ConsultarClienteCodigo()
+        {
+            //TODO:
+        }
+
+        static void ConsultarClienteNome()
+        {
+            //TODO: 
+        }
+
 
         static void GravarDadosArquivo(string linhaCadastro)
         {
@@ -169,13 +211,7 @@ namespace CadastroDeClientes {
 
         }
 
-        static void InformarAniversarios()
-        {
-            string hoje = DateTime.Now.ToShortDateString();
-            Cabecalho(" Aniversariantes do dia de hoje:" + hoje);
-
-            Console.ReadKey();
-        }
+        
 
         static int ObterNovoCodigoCliente()
         {
