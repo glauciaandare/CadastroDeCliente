@@ -1,0 +1,2 @@
+1;Teresa;35 9999-0000;teresa@gmail.com;12/02/1950;10000;1
+2;Maria Jose;(11) 65848-9595;maria.jose@gmail.com;12/07/1897;2000;2

@@ -35,14 +35,11 @@ namespace CadastroDeClientes {
         static void Cabecalho(string titulo)
         {
             Console.Clear();
-            /*Console.ForegroundColor = ConsoleColor.Red;
-            Console.BackgroundColor = ConsoleColor.White;*/
             Console.WriteLine("==================================================");
             Console.WriteLine("= " + titulo);
             Console.WriteLine("==================================================");
             Console.WriteLine();
-            /*Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.Yellow;*/
+            
         }
         /// <summary>
         /// Mostra as opções do Menu
@@ -194,3 +191,4 @@ namespace CadastroDeClientes {
         }
     }
 }
+
